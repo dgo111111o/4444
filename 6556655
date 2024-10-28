@@ -34,7 +34,7 @@
 		"tag": "vmess-ws-out",
 		"server": "SERVER-IP-ADDRESS",
 		"server_port": 80,
-		"uuid": "3c1890e2-c768-4247-8a3b-032f6ed13a64",
+		"uuid": "80782580-4483-4904-93db-130b1d7697cc",
 		"security": "auto",
 		"alter_id": 0,
 		"global_padding": false,
