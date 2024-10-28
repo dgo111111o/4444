@@ -1,0 +1,254 @@
+{
+    "mixed-port": 7890,
+    "ipv6": true,
+    "allow-lan": true,
+    "mode": "rule",
+    "log-level": "info",
+    "keep-alive-interval": 30,
+    "unified-delay": false,
+    "dns": {
+        "enable": true,
+        "listen": "0.0.0.0:1053",
+        "ipv6": true,
+        "respect-rules": true,
+        "enhanced-mode": "fake-ip",
+        "fake-ip-range": "198.18.0.1/16",
+        "nameserver": [
+            "https://8.8.8.8/dns-query"
+        ],
+        "proxy-server-nameserver": [
+            "8.8.8.8"
+        ]
+    },
+    "tun": {
+        "enable": true,
+        "stack": "system",
+        "auto-route": true,
+        "auto-redirect": true,
+        "auto-detect-interface": true,
+        "dns-hijack": [
+            "any:53",
+            "198.18.0.2:53"
+        ],
+        "device": "utun0",
+        "mtu": 9000,
+        "strict-route": true
+    },
+    "sniffer": {
+        "enable": true,
+        "force-dns-mapping": true,
+        "parse-pure-ip": true,
+        "sniff": {
+            "HTTP": {
+                "ports": [
+                    80,
+                    8080,
+                    8880,
+                    2052,
+                    2082,
+                    2086,
+                    2095
+                ],
+                "override-destination": false
+            },
+            "TLS": {
+                "ports": [
+                    443,
+                    8443,
+                    2053,
+                    2083,
+                    2087,
+                    2096
+                ],
+                "override-destination": false
+            }
+        }
+    },
+    "proxies": [
+        {
+            "name": "ًں’¦ 1 - VLESS - Domain - 443",
+            "type": "vless",
+            "server": "worker-gamfc-14030705-1001.smmsmm10001.workers.dev",
+            "port": 443,
+            "uuid": "3e7cfd2d-6304-4cdc-be45-783b5d0143f4",
+            "tls": true,
+            "network": "ws",
+            "udp": false,
+            "ws-opts": {
+                "path": "/1gVc2nFQJrnfwkhN",
+                "headers": {
+                    "host": "worker-gamfc-14030705-1001.smmsmm10001.workers.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "worker-gamfc-14030705-1001.smmsmm10001.workers.dev",
+            "alpn": [
+                "h2",
+                "http/1.1"
+            ],
+            "client-fingerprint": "random"
+        },
+        {
+            "name": "ًں’¦ 2 - VLESS - Domain - 443",
+            "type": "vless",
+            "server": "www.speedtest.net",
+            "port": 443,
+            "uuid": "3e7cfd2d-6304-4cdc-be45-783b5d0143f4",
+            "tls": true,
+            "network": "ws",
+            "udp": false,
+            "ws-opts": {
+                "path": "/DZom9mpOuOWsB5Fm",
+                "headers": {
+                    "host": "worker-gamfc-14030705-1001.smmsmm10001.workers.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "worker-gamfc-14030705-1001.smmsmm10001.workers.dev",
+            "alpn": [
+                "h2",
+                "http/1.1"
+            ],
+            "client-fingerprint": "random"
+        },
+        {
+            "name": "ًں’¦ 3 - VLESS - IPv4 - 443",
+            "type": "vless",
+            "server": "188.114.97.0",
+            "port": 443,
+            "uuid": "3e7cfd2d-6304-4cdc-be45-783b5d0143f4",
+            "tls": true,
+            "network": "ws",
+            "udp": false,
+            "ws-opts": {
+                "path": "/bdPWBuuxNaTWRuY1",
+                "headers": {
+                    "host": "worker-gamfc-14030705-1001.smmsmm10001.workers.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "worker-gamfc-14030705-1001.smmsmm10001.workers.dev",
+            "alpn": [
+                "h2",
+                "http/1.1"
+            ],
+            "client-fingerprint": "random"
+        },
+        {
+            "name": "ًں’¦ 4 - VLESS - IPv4 - 443",
+            "type": "vless",
+            "server": "188.114.96.0",
+            "port": 443,
+            "uuid": "3e7cfd2d-6304-4cdc-be45-783b5d0143f4",
+            "tls": true,
+            "network": "ws",
+            "udp": false,
+            "ws-opts": {
+                "path": "/gfjaXmqUf5T7h0wR",
+                "headers": {
+                    "host": "worker-gamfc-14030705-1001.smmsmm10001.workers.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "worker-gamfc-14030705-1001.smmsmm10001.workers.dev",
+            "alpn": [
+                "h2",
+                "http/1.1"
+            ],
+            "client-fingerprint": "random"
+        },
+        {
+            "name": "ًں’¦ 5 - VLESS - IPv6 - 443",
+            "type": "vless",
+            "server": "2a06:98c1:3120::",
+            "port": 443,
+            "uuid": "3e7cfd2d-6304-4cdc-be45-783b5d0143f4",
+            "tls": true,
+            "network": "ws",
+            "udp": false,
+            "ws-opts": {
+                "path": "/x1k6oYsWtuHH8eui",
+                "headers": {
+                    "host": "c0ed67ba.bpb-780027-14030715.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "c0ED67bA.bpB-780027-14030715.pagEs.DEV",
+            "alpn": [
+                "h2",
+                "http/1.1"
+            ],
+            "client-fingerprint": "random"
+        },
+        {
+            "name": "ًں’¦ 6 - VLESS - IPv6 - 443",
+            "type": "vless",
+            "server": "2a06:98c1:3121::",
+            "port": 443,
+            "uuid": "5a8a4a27-f32e-47f8-b633-25f18a2716a2",
+            "tls": true,
+            "network": "ws",
+            "udp": false,
+            "ws-opts": {
+                "path": "/RrUAdaVHxm9iTe7q",
+                "headers": {
+                    "host": "c0ed67ba.bpb-780027-14030715.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "C0eD67Ba.bpB-780027-14030715.pagES.DEv",
+            "alpn": [
+                "h2",
+                "http/1.1"
+            ],
+            "client-fingerprint": "random"
+        }
+    ],
+    "proxy-groups": [
+        {
+            "name": "âœ… Selector",
+            "type": "select",
+            "proxies": [
+                "ًں’¦ Best Ping ًں’¥",
+                "ًں’¦ 1 - VLESS - Domain - 443",
+                "ًں’¦ 2 - VLESS - Domain - 443",
+                "ًں’¦ 3 - VLESS - IPv4 - 443",
+                "ًں’¦ 4 - VLESS - IPv4 - 443",
+                "ًں’¦ 5 - VLESS - IPv6 - 443",
+                "ًں’¦ 6 - VLESS - IPv6 - 443"
+            ]
+        },
+        {
+            "name": "ًں’¦ Best Ping ًں’¥",
+            "type": "url-test",
+            "url": "https://www.gstatic.com/generate_204",
+            "interval": 30,
+            "tolerance": 50,
+            "proxies": [
+                "ًں’¦ 1 - VLESS - Domain - 443",
+                "ًں’¦ 2 - VLESS - Domain - 443",
+                "ًں’¦ 3 - VLESS - IPv4 - 443",
+                "ًں’¦ 4 - VLESS - IPv4 - 443",
+                "ًں’¦ 5 - VLESS - IPv6 - 443",
+                "ًں’¦ 6 - VLESS - IPv6 - 443"
+            ]
+        }
+    ],
+    "rules": [
+        "AND,((IP-CIDR,8.8.8.8/32),(DST-PORT,53)),DIRECT",
+        "NETWORK,udp,REJECT",
+        "MATCH,âœ… Selector"
+    ],
+    "ntp": {
+        "enable": true,
+        "server": "time.apple.com",
+        "port": 123,
+        "interval": 30
+    }
+}
